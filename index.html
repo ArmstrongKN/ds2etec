@@ -1,24 +1,322 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Estilos para o site -->
-        <link rel="stylesheet" href="cssindex.css">
+<html lang="pt-br">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <title>Globo</title>
-    </head>
-    <body>
+<head>
 
-        <!-- Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                           initial-scale=1.0">
 
-        <!-- Scripts de outras linguagens (Popper) necessário para os estilos do Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="Imgs/favicon.png" type="image/x-icon">
 
-    </body>
-    </html>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        
+        header {
+            background-color: rgb(25, 101, 159);
+        }
+        
+        #header {
+            height: 100px;
+        }
+        
+        .foto,
+        .texto {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+        }
+        
+        .categorias,
+        td {
+            padding-top: 50px;
+            padding-left: 200px;
+        }
+        
+        .temas {
+            font-size: 70px;
+            padding-top: 50px;
+            padding-left: 200px;
+        }
+    </style>
+
+    <title>Globo</title>
+
+</head>
+
+<body>
+
+    <!-- Obs: Verificar todos os eendereços internos deste código-fonte -->
+
+    <!-- Cabeçalho da página -->
+    <header> <img id="header" src="Imgs/header.png" alt=""> </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Nav-bar inteira -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container text-center">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Dropdrown de Esportes -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Esportes
+                            </a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="Esportes/copamundofeminina.html">Copa do Mundo Feminina</a></li>
+                                <li><a class="dropdown-item" href="Esportes/libertadores.html">Libertadores</a></li>
+                                <li><a class="dropdown-item" href="Esportes/brasileirao.html">Brasileirão</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Dropdrown de Filmes -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filmes
+                            </a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="Filmes/cinema.html">Cinema</a></li>
+                                <li><a class="dropdown-item" href="Filmes/teatro.html">Teatro</a></li>
+                                <li><a class="dropdown-item" href="Filmes/stream.html">Stream</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Dropdrowm de Jogos -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Jogos
+                            </a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="Jogos/xbox.html">Xbox</a></li>
+                                <li><a class="dropdown-item" href="Jogos/playstation.html">PlayStation</a></li>
+                                <li><a class="dropdown-item" href="Jogos/pcGamer.html">PC</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">🔍</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Notícias -->
+
+        <!-- Esportes -->
+        <!-- Copa do Mundo Feminina-->
+
+        <table>
+
+            <figcaption style="padding-top: 50px;">Bem-Vindo ao Site da Etec-DS, desfrute de todas as notícias sobre Esportes, Filmes e Jogos</figcaption>
+
+            <tr>
+                <th colspan="3">
+                    <h3 class="temas" style="color: chartreuse;">Esportes</h3>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h4 class="categorias" style="color: blueviolet;">Copa do Mundo Feminina</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: darkkhaki">Libertadores</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: green">Brasileirão</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Esportes/copamundofeminina.html"><img class="foto" src="Imgs/Esportes/CMFem/not1.png" alt="Brasil vs França" title="Brasil vs França"></a>
+                    <div class="texto">Copa do Mundo Feminina: Onde assistir Brasil x França pela segunda rodada do Grupo F</div>
+                </td>
+                <td>
+                    <a href="Esportes/libertadores.html"><img class="foto" src="Imgs/Esportes/Libertadores/not4.png" alt="Obsessão de Arias" title="Obsessão de Arias"></a>
+                    <div class="texto">Arias tem obsessão pela Libertadores com o Fluminense: "Fico sonhando acordado"</div>
+                </td>
+                <td>
+                    <a href="Esportes/brasileirao.html"><img class="foto" src="Imgs/Esportes/Brasileirao/not7.png" alt="Tecnologias da Copa do Mundo Feminina" title="Tecnologias da Copa do Mundo Feminina"></a>
+                    <div class="texto">Favoritismos #17: dicas, palpites e chances de vitória no Brasileirão</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Esportes/copamundofeminina.html"><img class="foto" src="Imgs/Esportes/CMFem/not2.png" alt="Artilheira da Copa do Mundo Feminina" title="Artilheira da Copa do Mundo Feminina"></a>
+                    <div class="texto">Quem é a artilheira da Copa do Mundo Feminina 2023 até o momento?</div>
+                </td>
+                <td>
+                    <a href="Esportes/libertadores.html"> <img class="foto" src="Imgs/Esportes/Libertadores/not5.png" alt="Ausência de Dudu" title="Ausência de Dudu"></a>
+                    <div class="texto">Cadê o Dudu? Atacante vive rara sequência sem jogar no Palmeiras de olho na Libertadores</div>
+                </td>
+                <td>
+                    <a href="Esportes/libertadores.html"><img class="foto" src="Imgs/Esportes/Brasileirao/not8.png" alt="Preparação de Matheus Gonçalves" title="Preparação de Matheus Gonçalves"></a>
+                    <div class="texto">Com Matheus Gonçalves, Braga encerra preparação para enfrentar Fortaleza pelo Brasileirão</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Esportes/copamundofeminina.html"><img class="foto" src="Imgs/Esportes/CMFem/not3.png" alt="Tecnologias da Copa do Mundo Feminina" title="Tecnologias da Copa do Mundo Feminina"></a>
+                    <div class="texto">França x Brasil na Copa Feminina: onde assistir ao vivo e horário</div>
+                </td>
+                <td>
+                    <a href="Esportes/libertadores.html"><img class="foto" src="Imgs/Esportes/Libertadores/not6.png" alt="Pulgar e Gerson fora do jogo contra o Grêmio" title="Pulgar e Gerson fora do jogo contra o Grêmio"></a>
+                    <div class="texto">Flamengo não terá Pulgar e Gerson contra o Grêmio pela Copa do Brasileirão</div>
+                </td>
+                <td>
+                    <a href="Esportes/brasileirao.html"><img class="foto" src="Imgs/Esportes/Brasileirao/not9.png" alt="Destaque de Vitor Roque" title="Destaque de Vitor Roque"></a>
+                    <div class="texto">Vitor Roque já aparece entre 5 melhores do Brasileirão 2023</div>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="3">
+                    <h3 class="temas" style="color: orangered;">Filmes</h3>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h4 class="categorias" style="color: rgb(233, 0, 0);">Cinema</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: rgb(235, 219, 0)">Teatro</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: rgb(255, 255, 255)">Stream</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Filmes/cinema.html"><img class="foto" src="Imgs/Filmes/Cinema/not10.png" alt="Lançamentos do Festival de Veneza" title="Lançamentos do Festival de Veneza"></a>
+                    <div class="texto">Os 10 lançamentos mais esperados do Festival de Cinema de Veneza 2023</div>
+                </td>
+                <td>
+                    <a href="Filmes/teatro.html"><img class="foto" src="Imgs/Filmes/Teatro/not13.png" alt="A volta de Tarsila" title="A volta de Tarsila"></a>
+                    <div class="texto">“Tarsila” volta ao Teatro Celina Queiroz no encerramento das férias</div>
+                </td>
+                <td>
+                    <a href="Filmes/stream.html"><img class="foto" src="Imgs/Filmes/Stream/not16.png" alt="The Witcher" title="The Witcher"></a>
+                    <div class="texto">The Witcher: veja personagens e elenco da série de fantasia da Netflix</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Filmes/cinema.html"><img class="foto" src="Imgs/Filmes/Cinema/not11.png" alt="Clássicos da Cine Orquestra" title="Clássicos da Cine Orquestra"></a>
+                    <div class="texto">Cine Orquestra, na UFF, tem Chaplin e outros clássicos do cinema mudo com sonoplastia e improviso</div>
+                </td>
+                <td>
+                    <a href="Filmes/teatro.html"><img class="foto" src="Imgs/Filmes/Teatro/not14.png" alt="Shows de Roberto Carlos no Rio de Janeiro" title="Shows de Roberto Carlos no Rio de Janeiro"></a>
+                    <div class="texto">Rio tem shows de Roberto Carlos eThiaguinho, estreias no teatro e celebração de 150 anos de Santos Dumont</div>
+                </td>
+                <td>
+                    <a href="Filmes/stream.html"><img class="foto" src="Imgs/Filmes/Stream/not17.png" alt="Paraíso" title="Paraíso"></a>
+                    <div class="texto">Paraíso: veja sinopse, elenco e trailer de ficção científica da Netflix</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Filmes/cinema.html"><img class="foto" src="Imgs/Filmes/Cinema/not12.png" alt="Cinema grátis em Belo Horizonte" title="Cinema grátis em Belo Horizonte"></a>
+                    <div class="texto">Cinema de graça em BH: 3ª edição da 'Mostra Mais que Amigos' acontece neste fim de semana no Cine St. Tereza</div>
+                </td>
+                <td>
+                    <a href="Filmes/teatro.html"><img class="foto" src="Imgs/Filmes/Teatro/not15.png" alt="Importância do Teatro Oficina" title="Importância do Teatro Oficina"></a>
+                    <div class="texto">A importância do Teatro Oficina para a arquitetura e cultura brasileira</div>
+                </td>
+                <td>
+                    <a href="Filmes/stream.html"><img class="foto" src="Imgs/Filmes/Stream/not18.png" alt="Serviços de Netflix para TV antiga" title="Serviços de Netflix para TV antiga"></a>
+                    <div class="texto">Chromecast, Mi TV Stick ou Roku: opções para ter Netflix e outros serviços em uma TV antiga</div>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="3">
+                    <h3 class="temas" style="color: blue;">Jogos</h3>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h4 class="categorias" style="color: rgb(13, 110, 0);">Xbox</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: rgb(0, 117, 212)">PlayStation</h4>
+                </th>
+                <th>
+                    <h4 class="categorias" style="color: rgb(218, 105, 0)">PC</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Jogos/xbox.html"><img class="foto" src="Imgs/Jogos/Xbox/not19.png" alt="Prêmios da Iti" title="Prêmios da Iti"></a>
+                    <div class="texto">Utilize o iti e concorra a 30 Xbox Series S, 15 cadeiras gamer e 15 headsets</div>
+                </td>
+
+                <td>
+                    <a href="Jogos/playstation.html"><img class="foto" src="Imgs/Jogos/PlayStation/not22.png" alt="Melhores jogos PS5" title="Melhores jogos PS5"></a>
+                    <div class="texto">PC gamer: qual o melhor processador, AMD ou Intel?</div>
+                </td>
+
+                <td>
+                    <a href="Jogos/pcGamer.html"><img class="foto" src="Imgs/Jogos/PC/not25.png" alt="Custo de PC" title="Custo de PC"></a>
+                    <div class="texto">Quanto custa um PC gamer bom e barato?</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Jogos/xbox.html"><img class="foto" src="Imgs/Jogos/Xbox/not20.png" alt="Controle das Tartarugas Ninjas" title="Controle das Tartarugas Ninjas"></a>
+                    <div class="texto">Novo controle do Xbox tem cheiro de pizza e visual das Tartarugas Ninjas</div>
+                </td>
+                <td>
+                    <a href="Jogos/playstation.html"><img class="foto" src="Imgs/Jogos/PlayStation/not23.png" alt="COD no PS" title="COD no PS"></a>
+                    <div class="texto">Microsoft e Sony fecham acordo para manter Call of Duty no Playstation</div>
+                </td>
+                <td>
+                    <a href="Jogos/playstation.html"><img class="foto" src="Imgs/Jogos/PC/not26.png" alt="Preparação de Matheus Gonçalves" title="Preparação de Matheus Gonçalves"></a>
+                    <div class="texto">Com Matheus Gonçalves, Braga encerra preparação para enfrentar Fortaleza pelo Brasileirão</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="Jogos/xbox.html"><img class="foto" src="Imgs/Jogos/Xbox/not21.png" alt="Vendas sem estoque" title="Vendas sem estoque"></a>
+                    <div class="texto">Sem estoque, PS5 e Xbox Series X são vendidos por até R$ 10 mil no Brasil</div>
+                </td>
+                <td>
+                    <a href="Jogos/playstation.html"><img class="foto" src="Imgs/Jogos/PlayStation/not24.png" alt="PlayStation - Titanic" title="Playstation - Titanic"></a>
+                    <div class="texto">Sem assentos, com uma única janela e controlado por PlayStation: como é o submarino que sumiu rumo ao Titanic</div>
+                </td>
+                <td>
+                    <a href="Jogos/pcGamer.html"><img class="foto" src="Imgs/Jogos/PC/not27.png" alt="Suspender ou desligar?" title="Suspender ou desligar?"></a>
+                    <div class="texto">Quando suspender ou desligar o PC? Veja dicas para aumentar a vida útil do seu computador</div>
+                </td>
+            </tr>
+
+        </table>
+
+    </main>
+
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
